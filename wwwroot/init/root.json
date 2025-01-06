@@ -349,48 +349,6 @@
       "url": "https://gis.aremi.data61.io/bom/wms"
     },
     {
-      "id": "taipei_road_clampToGround",
-      "type": "i3s",
-      "name": "臺北市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/0"
-    },
-    {
-      "id": "taichung_road_clampToGround",
-      "type": "i3s",
-      "name": "臺中市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/1"
-    },
-    {
-      "id": "keelung_road_clampToGround",
-      "type": "i3s",
-      "name": "基隆市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/2"
-    },
-    {
-      "id": "tainan_road_clampToGround",
-      "type": "i3s",
-      "name": "臺南市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/3"
-    },
-    {
-      "id": "kaohsiung_road_clampToGround",
-      "type": "i3s",
-      "name": "高雄市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/4"
-    },
-    {
-      "id": "newTaipei_road_clampToGround",
-      "type": "i3s",
-      "name": "新北市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/5"
-    },
-    {
-      "id": "taoyuan_road_clampToGround",
-      "type": "i3s",
-      "name": "桃園市一般道路(地形貼合版)",
-      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/7"
-    },
-    {
       "id": "udd_aerial_ortho",
       "name": "臺北市都發局正射影像",
       "type": "wmts",
