@@ -1,6 +1,9 @@
 {
   "context": "..",
 
+  "name": "terriamap-container",
+  "image": "terriamap",
+
   "build": {
     "dockerfile": "../Dockerfile",
     "target": "develop"

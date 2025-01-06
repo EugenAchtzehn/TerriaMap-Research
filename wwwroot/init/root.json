@@ -1,0 +1,548 @@
+{
+  "homeCamera": {
+    "north": 25.238,
+    "east": 121.8675,
+    "south": 24.9418,
+    "west": 121.3067
+  },
+  "models": {
+    "terrain": {
+      "id": "north_taiwan_terrain",
+      "name": "north_taiwan_terrain",
+      "type": "cesium-terrain",
+      "ionAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkMGZjNDkxYS1kMjQ0LTQ4ZGQtYjVhMS0xMzRmMDIxMWZlZDIiLCJpZCI6MjgwLCJpYXQiOjE1MjUyMTg5NTR9.-Fx8JMqh14wYcYHkFgEH3kqY4EeOzUkWfDSjLCwOlOs",
+      "ionAssetId": 338546
+    }
+  },
+  "settings": {
+    "depthTestAgainstTerrainEnabled": true
+  },
+  "workbench": ["3d_tiles_taipei_city"],
+  "viewerMode": "3d",
+  "baseMaps": {
+    "items": [
+      {
+        "image": "images/basemaps/udd_photo2.png",
+        "item": {
+          "id": "basemap//TPE_Aerial_Ortho",
+          "name": "臺北市都發局正射影像",
+          "type": "composite",
+          "members": [
+            {
+              "id": "basemap//TPE_Aerial_Ortho/imagery",
+              "name": "臺北市都發局正射影像",
+              "type": "wmts",
+              "layer": "Aerial_Ortho_2023",
+              "url": "https://www.historygis.udd.gov.taipei/arcgis/rest/services/Aerial/Ortho_2023/MapServer/WMTS/",
+              "style": "default",
+              "opacity": 1
+            },
+            {
+              "id": "basemap//NLSC_PHOTO2",
+              "name": "正射影像圖(通用)",
+              "type": "wms",
+              "layers": "PHOTO2",
+              "url": "https://wms.nlsc.gov.tw/wms"
+            }
+          ]
+        }
+      }
+    ],
+    "defaultBaseMapId": "basemap//TPE_Aerial_Ortho",
+    "previewBaseMapId": "basemap//TPE_Aerial_Ortho"
+  },
+  "catalog": [
+    {
+      "id": "public_usage",
+      "name": "Public",
+      "type": "group",
+      "members": [
+        {
+          "id": "nlsc_wmts",
+          "name": "國土測繪中心 WMTS 圖層集",
+          "type": "wmts-group",
+          "url": "https://wmts.nlsc.gov.tw/wmts"
+        },
+        {
+          "id": "nlsc_wms",
+          "type": "wms-group",
+          "url": "https://wms.nlsc.gov.tw/wms",
+          "name": "國土測繪中心 WMS 圖層集",
+          "info": [
+            {
+              "name": "Description",
+              "content": "內容描述，Info Description"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "版權聲明，內政部國土中心擁有圖資的全部權利"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "KML/KMZ files",
+      "type": "group",
+      "members": [
+        {
+          "id": "churches_kml",
+          "name": "臺北市教會",
+          "type": "kml",
+          "url": "catalogue_data/KML/churches.kml",
+          "dataCustodian": "鴻圖股份有限公司",
+          "legends": [
+            {
+              "title": "臺北市教會圖例：",
+              "items": [
+                {
+                  "title": "基督教",
+                  "color": "#FFAA00",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "religious-christian"
+                },
+                {
+                  "title": "天主教",
+                  "color": "#FF0808",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "religious-christian"
+                },
+                {
+                  "title": "回教",
+                  "color": "#080400",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "religious-muslim"
+                },
+                {
+                  "title": "天理教",
+                  "color": "#000408",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "religious-shinto"
+                },
+                {
+                  "title": "巴哈伊教",
+                  "color": "#0008FF",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "religious-jewish"
+                },
+                {
+                  "title": "其他",
+                  "color": "#00FF00",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "religious-buddhist"
+                },
+                {
+                  "title": "無",
+                  "color": "#BFBFBF",
+                  "outlineColor": "#FFFFFF",
+                  "outlineWidth": 2,
+                  "marker": "circle"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CZML files",
+      "type": "group",
+      "members": [
+        {
+          "id": "rd4YAInjh1",
+          "name": "Simple Test (CZML)",
+          "type": "czml",
+          "url": "test/simple.czml"
+        },
+        {
+          "id": "wqEHOmOnto",
+          "name": "Large feature info box (CZML)",
+          "type": "czml",
+          "url": "test/bigInfobox.czml"
+        },
+        {
+          "id": "1Zv1WlgUt0",
+          "name": "Embedded CZML",
+          "type": "czml",
+          "czmlData": [
+            {
+              "id": "document",
+              "version": "1.0"
+            },
+            {
+              "position": {
+                "cartographicDegrees": [133.0, -25.0, 0.0]
+              },
+              "point": {
+                "pixelSize": 5,
+                "color": {
+                  "rgba": [255, 0, 0, 255]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GeoJSON",
+      "type": "group",
+      "members": [
+        {
+          "id": "taipei_zoo_geojson",
+          "name": "Taipei Zoo",
+          "type": "geojson",
+          "url": "catalogue_data/GeoJSON/taipei-zoo.geojson"
+        },
+        {
+          "id": "fourth_floor_geojson",
+          "name": "展場 GeoJSON",
+          "type": "geojson",
+          "url": "catalogue_data/GeoJSON/fourth-floor.geojson",
+          "dataCustodian": "鴻圖股份有限公司",
+          "heightProperty": "height"
+        },
+        {
+          "name": "Test overriding styled and unstyled features",
+          "type": "geojson",
+          "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson",
+          "style": {
+            "marker-size": "200",
+            "marker-color": "#ff3333",
+            "marker-symbol": "rail"
+          }
+        },
+        {
+          "name": "Testing stroke styles applied to embedded unstyled point.",
+          "type": "geojson",
+          "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson",
+          "style": {
+            "stroke-width": 20,
+            "stroke": "red",
+            "marker-size": "200"
+          },
+          "geoJsonData": {
+            "type": "FeatureCollection",
+            "features": [
+              {
+                "type": "Feature",
+                "properties": {
+                  "name": "Thick red border, unspecified centre"
+                },
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [146.469, -40.83]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "terria-reference",
+      "url": "catalogue_data/I3S/i3s_dataset.json",
+      "id": "i3s_dataset",
+      "name": "I3S 圖層集",
+      "isGroup": true
+    },
+    {
+      "url": "http://services.ga.gov.au/gis/rest/services/GA_Surface_Geology/MapServer",
+      "type": "esri-mapServer",
+      "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+      "name": "Surface Geology",
+      "rectangle": { "west": 106, "south": -52, "east": 172, "north": -8 },
+      "info": [
+        {
+          "name": "Licence",
+          "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+        }
+      ]
+    },
+    {
+      "name": "Small glTF 3D Models",
+      "description": "Demonstrations of adding 3D building data to the map using glTF.",
+      "type": "group",
+      "members": [
+        {
+          "name": "Smooth Geelong Buildings glTF Mini Demo",
+          "description": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using data made available from the [City of Greater Geelong](mailto:gis@geelongcity.vic.gov.au) under a Creative Commons license. The data used to create this demo was originally obtained via email in .skp format (> 100MB so not suitable for inclusion in this repo), however there is also a lower quality dataset of the same region available on data.gov.au in .kml/.dae format (this dataset does not seem to contain building textures).\n\nSee [readme.txt](test/3d/geelong/readme.txt) for more information.",
+          "attribution": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using a dataset obtained from the City of Greater Geelong. The original dataset is licensed under the CC BY 3.0 AU.",
+          "type": "czml",
+          "url": "test/3d/geelong/smooth.czml",
+          "rectangle": {
+            "west": 144.354,
+            "south": -38.147,
+            "east": 144.358,
+            "north": -38.15
+          }
+        },
+        {
+          "name": "Terrain Geelong Buildings glTF Mini Demo",
+          "description": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using data made available from the [City of Greater Geelong](mailto:gis@geelongcity.vic.gov.au) under a Creative Commons license. The data used to create this demo was originally obtained via email in .skp format (> 100MB so not suitable for inclusion in this repo), however there is also a lower quality dataset of the same region available on data.gov.au in .kml/.dae format (this dataset does not seem to contain building textures).\n\nSee [readme.txt](test/3d/geelong/readme.txt) for more information.",
+          "attribution": "geelong_mini_demo_bin_linux_v1.0-draft_x64.gltf was created using a dataset obtained from the City of Greater Geelong. The original dataset is licensed under the CC BY 3.0 AU.",
+          "type": "czml",
+          "url": "test/3d/geelong/terrain.czml",
+          "rectangle": {
+            "west": 144.354,
+            "south": -38.147,
+            "east": 144.358,
+            "north": -38.15
+          }
+        }
+      ]
+    },
+    {
+      "type": "gtfs",
+      "url": "https://api.transport.nsw.gov.au/v1/gtfs/vehiclepos/buses",
+      "image": "build/TerriaJS/images/icons/sydney_bus_icon_smaller.png",
+      "name": "NSW Live Transport - Buses",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "apikey l4VnvZi4uQLSvD7lwN2ac7vIDJUJ3epYva4l"
+        }
+      ],
+      "refreshInterval": 5,
+      "featureInfoTemplate": {
+        "name": "{{vehicle_trip_bus_number}}",
+        "template": "<b>Bus:</b> {{route_short_name}}<br><b>Occupancy:</b> {{occupancy_status_str}}<br><b>Speed:</b> {{speed_km}} km/h<br><b style='padding-right: 5px'>Direction:</b> <span style='transform: rotate({{bearing}}deg); width: 10px; display: inline-block' aria-label='{{bearing}} degrees' role='img' title='{{bearing}} degrees'>&#x2B06;</div>"
+      },
+      "model": {
+        "url": "lowpoly_bus/scene.gltf",
+        "scale": 0.3048,
+        "maximumDistance": 500.0
+      }
+    },
+    {
+      "type": "esri-mapServer-group",
+      "name": "Catchment Scale Land Use",
+      "id": "354db2f2",
+      "url": "https://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_2018/MapServer",
+      "forceProxy": true
+    },
+    {
+      "id": "5z6OTFssaW",
+      "name": "CSIRO Soil and Landscape Grid",
+      "url": "https://www.asris.csiro.au/arcgis/rest/services/TERN",
+      "type": "esri-group"
+    },
+    {
+      "id": "B8gpm2I3gB",
+      "name": "Sentinel-2 cloudless world 2020",
+      "type": "wmts",
+      "url": "https://a.s2maps-tiles.eu/wmts/",
+      "layer": "s2cloudless-2020_3857",
+      "style": "default",
+      "opacity": 1
+    },
+    {
+      "id": "3chNzj13TB",
+      "type": "wms-group",
+      "name": "WMS layers for the Australian Renewable Energy Mapping Infrastructure project.",
+      "url": "https://gis.aremi.data61.io/bom/wms"
+    },
+    {
+      "id": "taipei_road_clampToGround",
+      "type": "i3s",
+      "name": "臺北市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/0"
+    },
+    {
+      "id": "taichung_road_clampToGround",
+      "type": "i3s",
+      "name": "臺中市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/1"
+    },
+    {
+      "id": "keelung_road_clampToGround",
+      "type": "i3s",
+      "name": "基隆市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/2"
+    },
+    {
+      "id": "tainan_road_clampToGround",
+      "type": "i3s",
+      "name": "臺南市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/3"
+    },
+    {
+      "id": "kaohsiung_road_clampToGround",
+      "type": "i3s",
+      "name": "高雄市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/4"
+    },
+    {
+      "id": "newTaipei_road_clampToGround",
+      "type": "i3s",
+      "name": "新北市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/5"
+    },
+    {
+      "id": "taoyuan_road_clampToGround",
+      "type": "i3s",
+      "name": "桃園市一般道路(地形貼合版)",
+      "url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/7"
+    },
+    {
+      "id": "udd_aerial_ortho",
+      "name": "臺北市都發局正射影像",
+      "type": "wmts",
+      "layer": "Aerial_Ortho_2023",
+      "url": "https://www.historygis.udd.gov.taipei/arcgis/rest/services/Aerial/Ortho_2023/MapServer/WMTS/",
+      "style": "default",
+      "opacity": 1,
+      "description": "正射影像圖(北市都發局), 描述",
+      "idealZoom": {
+        "camera": {
+          "north": 25.238,
+          "east": 121.8675,
+          "south": 24.9418,
+          "west": 121.3067
+        }
+      }
+    },
+    {
+      "id": "nlsc_photo2",
+      "name": "正射影像圖(通用)",
+      "type": "wmts",
+      "url": "https://wmts.nlsc.gov.tw/wmts/",
+      "layer": "PHOTO2",
+      "style": "default",
+      "opacity": 1,
+      "description": "正射影像圖(通用), description",
+      "idealZoom": {
+        "camera": {
+          "north": 25.238,
+          "east": 121.8675,
+          "south": 24.9418,
+          "west": 121.3067
+        }
+      }
+    },
+    {
+      "id": "3d_tiles_trees",
+      "name": "臺北市路樹",
+      "type": "3d-tiles",
+      "ionAssetId": 2346555,
+      "disablePreview": true
+    },
+    {
+      "id": "3d_tiles_taipei_city",
+      "name": "臺北市 3D 建物",
+      "type": "3d-tiles",
+      "url": "https://3dtiles.nlsc.gov.tw/building/tiles3d/0/tileset.json",
+      "disablePreview": true,
+      "description": "臺北市 3D 建築物, 描述",
+      "info": [
+        {
+          "name": "name inside info",
+          "content": "<p>LOD1</p>"
+        }
+      ]
+    },
+    {
+      "id": "IaRi3Qn1pj",
+      "type": "group",
+      "name": "Hydro Energy Storage",
+      "members": [
+        {
+          "id": "uhsE72",
+          "type": "group",
+          "name": "ANU STORES Worldwide",
+          "members": [
+            {
+              "type": "wms",
+              "name": "Pumped hydro: 150GWh 18h",
+              "id": "c855dca8",
+              "info": [
+                {
+                  "name": "Description",
+                  "content": "This information has been developed by the 100% Renewable Energy group from the Research School of Electrical, Energy and Materials Engineering at the Australia National University.  http://re100.eng.anu.edu.au<p>Potential sites for off-river PHES are identified using GIS algorithms with defined search criteria. The surveyed latitude range is up to 60 degrees north and south. Each identified site comprises an upper and lower reservoir pair plus a hypothetical tunnel route between the reservoirs, and includes data such as latitude, longitude, altitude, head, slope, water volume, water area, rock volume, dam wall length, water/rock ratio, energy storage potential and approximate relative cost (categories A-E).</p><p>Wall heights are adjusted for each reservoir in a pair to yield equal water volumes to achieve the targeted energy storage. Energy (= head * usable volume * g * efficiency) and storage-length combinations are provided in Table 1. The approximate number of people that a reservoirs could service for a 100% renewable electricity grid is listed in the third line.</p><style>  table, th, td {    border: 1px solid black;    padding: 5px;    text-align: center;  }</style><center><table>  <tr>    <th>Table 1</th> <th>2 GWh</th> <th>5 GWh</th> <th>15 GWh</th> <th>50 GWh</th> <th>150 GWh</th>  </tr>  <tr>    <th>6 hours</th> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>-</td>  </tr>  <tr>    <th>18 hours</th> <td>-</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td>  </tr>  <tr>    <th>Millions of people</th> <td>0.1</td> <td>0.25</td> <td>0.75</td> <td>2.5</td> <td>7.5</td>  </tr></table></center><p>Virtually all upper reservoirs are away from rivers, and none intrude on protected area or urban areas listed in the databases that we use below.  There may be local constraints that prevent use of a particular site that is not reflected in these databases. Please refer to the ANU 100% Renewable Energy website for additional information: http://re100.eng.anu.edu.au/global</p>"
+                },
+                {
+                  "name": "Disclaimer",
+                  "content": "None of the PHES sites discussed in this study have been the subject of geological, hydrological, environmental, heritage and other studies, and it is not known whether any particular site would be suitable. The commercial feasibility of developing these sites is unknown. As with all major engineering projects, diligent attention to quality assurance would be required for safety and efficacy.<p>There has been no investigation of land tenure apart from exclusion of some environmental areas and urban areas, and no discussions with land owners and managers. Nothing in this list of potential site locations implies any rights for development of these locations. Accuracy of the sites depends on the accuracy of the source data. There may be sites that fall into local protected areas or urban areas that are not identified by the source data.</p>"
+                },
+                {
+                  "name": "Access and acknowledgements",
+                  "content": "In publications that use this information please acknowledge the RE100 Group, Australian National University, http://re100.eng.anu.edu.au/"
+                },
+                {
+                  "name": "Source Data",
+                  "content": "Digital Terrain Model (DTM) https://earthexplorer.usgs.gov/ <p>World Database Protected Areas: https://www.protectedplanet.net/</p> <p>Urban extent:  HBASE http://sedac.ciesin.columbia.edu/data/set/ulandsat-hbase-v1/data-download</p> "
+                }
+              ],
+              "infoSectionOrder": [
+                "Disclaimer",
+                "Description",
+                "Access and acknowledgements",
+                "Source Data"
+              ],
+              "url": "https://gis.aremi.data61.io/anu/wms",
+              "opacity": 1,
+              "layers": "150gwh_18h",
+              "featureInfoTemplate": {
+                "template": "<div>  <style>    tr {background-color: transparent; ! important;}  </style>  {{description}}</div>"
+              },
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "shareKeys": [
+                "Root Group/Renewable Energy/Hydro/Storage/ANU STORES Worldwide/Pumped hydro: 150GWh 18h"
+              ]
+            }
+          ],
+          "description": "As the proportion of wind and solar photovoltaics (PV) in an electrical grid extends into the 50-100% range a combination of additional long-distance high voltage transmission, demand management and local storage is required for stability. Pumped Hydro Energy Storage (PHES) constitutes 97% of electricity storage worldwide because of its low cost.<p>The <a href='http://re100.eng.anu.edu.au/global'>RE100 Group ANU</a> found about 530,000 potentially feasible PHES sites with storage potential of about 22 million Gigawatt-hours (GWh) by using geographic information system (GIS) analysis. This is about one hundred times greater than required to support a 100% global renewable electricity system. Brownfield sites (existing reservoirs, old mining sites) will be included in a future analysis.</p>This information has been developed by the 100% Renewable Energy group from the Research School of Electrical, Energy and Materials Engineering at the Australia National University.  http://re100.eng.anu.edu.au<p>Potential sites for off-river PHES are identified using GIS algorithms with defined search criteria. The surveyed latitude range is up to 60 degrees north and south. Each identified site comprises an upper and lower reservoir pair plus a hypothetical tunnel route between the reservoirs, and includes data such as latitude, longitude, altitude, head, slope, water volume, water area, rock volume, dam wall length, water/rock ratio, energy storage potential and approximate relative cost (categories A-E).</p><p>Wall heights are adjusted for each reservoir in a pair to yield equal water volumes to achieve the targeted energy storage. Energy (= head * usable volume * g * efficiency) and storage-length combinations are provided in Table 1. The approximate number of people that a reservoirs could service for a 100% renewable electricity grid is listed in the third line.</p><style>  table, th, td {    border: 1px solid black;    padding: 5px;    text-align: center;  }</style><center><table>  <tr>    <th>Table 1</th> <th>2 GWh</th> <th>5 GWh</th> <th>15 GWh</th> <th>50 GWh</th> <th>150 GWh</th>  </tr>  <tr>    <th>6 hours</th> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>-</td>  </tr>  <tr>    <th>18 hours</th> <td>-</td> <td>✓</td> <td>✓</td> <td>✓</td> <td>✓</td>  </tr>  <tr>    <th>Millions of people</th> <td>0.1</td> <td>0.25</td> <td>0.75</td> <td>2.5</td> <td>7.5</td>  </tr></table></center><p>Virtually all upper reservoirs are away from rivers, and none intrude on protected area or urban areas listed in the databases that we use below.  There may be local constraints that prevent use of a particular site that is not reflected in these databases. Please refer to the ANU 100% Renewable Energy website for additional information: http://re100.eng.anu.edu.au/global</p><h4>DISCLAIMER</h4>None of the PHES sites discussed in this study have been the subject of geological, hydrological, environmental, heritage and other studies, and it is not known whether any particular site would be suitable. The commercial feasibility of developing these sites is unknown. As with all major engineering projects, diligent attention to quality assurance would be required for safety and efficacy.<p>There has been no investigation of land tenure apart from exclusion of some environmental areas and urban areas, and no discussions with land owners and managers. Nothing in this list of potential site locations implies any rights for development of these locations. Accuracy of the sites depends on the accuracy of the source data. There may be sites that fall into local protected areas or urban areas that are not identified by the source data.</p>",
+          "shareKeys": [
+            "Root Group/Renewable Energy/Hydro/Storage/ANU STORES Worldwide"
+          ]
+        },
+        {
+          "type": "wms",
+          "name": "Australia Upper Reservoir Locations - ANU STORES",
+          "info": [
+            {
+              "name": "Disclaimer",
+              "content": "None of the PHES sites discussed in this study have been the subject of geological, hydrological, environmental and other studies, and it is not known whether any particular site would be suitable.<p>Please refer to the ANU 100% Renewable Energy website for additional information:</p><p><a href='http://re100.eng.anu.edu.au/'>http://re100.eng.anu.edu.au/</a></p><p>There has been no investigation of land tenure apart from exclusion of national parks and urban areas, and no discussions with land owners and managers. Nothing in this list of potential site locations implies any rights for development of these locations.</p><p>The commercial feasibility of developing these sites is unknown. As with all major engineering projects, diligent attention to quality assurance would be required for safety and efficacy.</p>"
+            }
+          ],
+          "initialMessage": {
+            "title": "Australia Upper Reservoir Locations Disclaimer",
+            "content": "None of the PHES sites discussed in this study have been the subject of geological, hydrological, environmental and other studies, and it is not known whether any particular site would be suitable.<p>Please refer to the ANU 100% Renewable Energy website for additional information:</p><p><a href='http://re100.eng.anu.edu.au/'>http://re100.eng.anu.edu.au/</a></p><p>There has been no investigation of land tenure apart from exclusion of national parks and urban areas, and no discussions with land owners and managers. Nothing in this list of potential site locations implies any rights for development of these locations.</p><p>The commercial feasibility of developing these sites is unknown. As with all major engineering projects, diligent attention to quality assurance would be required for safety and efficacy.</p>",
+            "confirmation": true,
+            "width": 600,
+            "height": 550,
+            "confirmText": "I Agree"
+          },
+          "url": "https://gis.aremi.data61.io/ANU_STORES/wms",
+          "opacity": 1,
+          "rectangle": {
+            "west": 112,
+            "south": -48,
+            "east": 155,
+            "north": -5
+          },
+          "layers": "all_reservoirs",
+          "featureInfoTemplate": {
+            "name": "{{Index}}{{#Dam_volume}}: {{Stored_Ene}} GWh {{/Dam_volume}}",
+            "template": "<h3>{{#Dam_volume}}Reservoir:{{/Dam_volume}} {{^Dam_volume}}Dam wall:{{/Dam_volume}} {{Index}}</h3><table>{{#Dam_volume}}  <tr>    <th>Stored energy:</th>    <td>{{Stored_Ene}} GWh</td>  </tr>{{/Dam_volume}}  <tr>    <th>Elevation:</th>    <td>{{Elevation_}} metres</td>  </tr>{{#Dam_volume}}  <tr>    <th>Water area:</th>    <td>{{Water_area}} hectares</td>  </tr>  <tr>    <th>Reservoir volume:&nbsp;</th>    <td>{{Reservoir_}} gigalitres</td>  </tr>  <tr>    <th>Dam length:</th>    <td>{{Dam_length}} metres</td>  </tr>  <tr>    <th>Dam area:</th>    <td>{{Dam_area_h}} hectares</td>  </tr>  <tr>    <th>Dam volume:</th>    <td>{{Dam_volume}} gigalitres</td>  </tr>  <tr>    <th>Water to rock ratio:</th>    <td>{{Water_rock}}</td>  </tr>{{/Dam_volume}}</table>"
+          },
+          "tileErrorHandlingOptions": {
+            "ignoreUnknownTileErrors": true
+          },
+          "id": "RqnKAv",
+          "shareKeys": [
+            "Root Group/Renewable Energy/Hydro/Storage/Australia Upper Reservoir Locations - ANU STORES"
+          ]
+        }
+      ]
+    }
+  ]
+}

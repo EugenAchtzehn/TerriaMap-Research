@@ -43,6 +43,7 @@ export default function UserInterface(props) {
         {relatedMaps && relatedMaps.length > 0 ? (
           <RelatedMaps relatedMaps={relatedMaps} />
         ) : null}
+        <MenuItem caption="關於鴻圖" href={"https://www.omniguider.com/"} />
       </MenuLeft>
       <ExperimentalMenu>
         {/* {isBrowserSupportedAV() && (
