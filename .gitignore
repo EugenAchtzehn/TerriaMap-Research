@@ -4,11 +4,12 @@ node_modules/
 .idea/
 
 # Build by Gulp Tasks
-wwwroot/build/
-wwwroot/doc/
-wwwroot/index.html
+# wwwroot/build/
+# wwwroot/doc/
+# wwwroot/index.html
 version.js
 version.json
+wwwroot/index.ejs
 wwwroot/init/nm.json
 datasources/00_National_Data_Sets.json
 
@@ -28,7 +29,7 @@ deploy/packages/
 deploy/work/
 
 # ISSUE: 另一個 repo 來管理 terriajs 的 package?
-# packages/
+packages/
 
 pancake/
 .npmrc
